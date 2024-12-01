@@ -9,7 +9,7 @@ def init():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     
     # Load the generator
-    generator.load_state_dict(torch.load('generator.pt', map_location=device))
+    generator.load_state_dict(torch.load('models/generator.pt', map_location=device))
     generator.to(device)
 
 def generate_mnist_digit(digit):
